@@ -13,6 +13,11 @@
 		313B6DAF1836CE340020C045 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 313B6DAD1836CE340020C045 /* Credits.rtf */; };
 		313B6DB21836CE340020C045 /* PRHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 313B6DB11836CE340020C045 /* PRHAppDelegate.m */; };
 		313B6DB51836CE340020C045 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313B6DB31836CE340020C045 /* MainMenu.xib */; };
+		313B6DBE1836CE510020C045 /* PRHHotkeysWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 313B6DBC1836CE510020C045 /* PRHHotkeysWindowController.m */; };
+		313B6DC01836CE5D0020C045 /* PRHHotkeysWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 313B6DC21836CE5D0020C045 /* PRHHotkeysWindowController.xib */; };
+		313B6DC71836D4D30020C045 /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 313B6DC41836D4D30020C045 /* SRCommon.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		313B6DC81836D4D30020C045 /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 313B6DC61836D4D30020C045 /* SRKeyCodeTransformer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		313B6DCB1836D5860020C045 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313B6DCA1836D5860020C045 /* Carbon.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,14 @@
 		313B6DB01836CE340020C045 /* PRHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRHAppDelegate.h; sourceTree = "<group>"; };
 		313B6DB11836CE340020C045 /* PRHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRHAppDelegate.m; sourceTree = "<group>"; };
 		313B6DB41836CE340020C045 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		313B6DBB1836CE510020C045 /* PRHHotkeysWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRHHotkeysWindowController.h; sourceTree = "<group>"; };
+		313B6DBC1836CE510020C045 /* PRHHotkeysWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRHHotkeysWindowController.m; sourceTree = "<group>"; };
+		313B6DC11836CE5D0020C045 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/PRHHotkeysWindowController.xib; sourceTree = "<group>"; };
+		313B6DC31836D4D30020C045 /* SRCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRCommon.h; path = ShortcutRecorder/Framework/Source/SRCommon.h; sourceTree = SOURCE_ROOT; };
+		313B6DC41836D4D30020C045 /* SRCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRCommon.m; path = ShortcutRecorder/Framework/Source/SRCommon.m; sourceTree = SOURCE_ROOT; };
+		313B6DC51836D4D30020C045 /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRKeyCodeTransformer.h; path = ShortcutRecorder/Framework/Source/SRKeyCodeTransformer.h; sourceTree = SOURCE_ROOT; };
+		313B6DC61836D4D30020C045 /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRKeyCodeTransformer.m; path = ShortcutRecorder/Framework/Source/SRKeyCodeTransformer.m; sourceTree = SOURCE_ROOT; };
+		313B6DCA1836D5860020C045 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				313B6DCB1836D5860020C045 /* Carbon.framework in Frameworks */,
 				313B6D9F1836CE340020C045 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				313B6D9E1836CE340020C045 /* Cocoa.framework */,
+				313B6DCA1836D5860020C045 /* Carbon.framework */,
 				313B6DA01836CE340020C045 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -85,6 +100,10 @@
 				313B6DB01836CE340020C045 /* PRHAppDelegate.h */,
 				313B6DB11836CE340020C045 /* PRHAppDelegate.m */,
 				313B6DB31836CE340020C045 /* MainMenu.xib */,
+				313B6DBB1836CE510020C045 /* PRHHotkeysWindowController.h */,
+				313B6DBC1836CE510020C045 /* PRHHotkeysWindowController.m */,
+				313B6DC21836CE5D0020C045 /* PRHHotkeysWindowController.xib */,
+				313B6DC91836D4D90020C045 /* ShortcutRecorder */,
 				313B6DA51836CE340020C045 /* Supporting Files */,
 			);
 			path = Hotkeys;
@@ -100,6 +119,17 @@
 				313B6DAD1836CE340020C045 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		313B6DC91836D4D90020C045 /* ShortcutRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				313B6DC31836D4D30020C045 /* SRCommon.h */,
+				313B6DC41836D4D30020C045 /* SRCommon.m */,
+				313B6DC51836D4D30020C045 /* SRKeyCodeTransformer.h */,
+				313B6DC61836D4D30020C045 /* SRKeyCodeTransformer.m */,
+			);
+			name = ShortcutRecorder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +187,7 @@
 				313B6DA91836CE340020C045 /* InfoPlist.strings in Resources */,
 				313B6DAF1836CE340020C045 /* Credits.rtf in Resources */,
 				313B6DB51836CE340020C045 /* MainMenu.xib in Resources */,
+				313B6DC01836CE5D0020C045 /* PRHHotkeysWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +200,9 @@
 			files = (
 				313B6DAB1836CE340020C045 /* main.m in Sources */,
 				313B6DB21836CE340020C045 /* PRHAppDelegate.m in Sources */,
+				313B6DBE1836CE510020C045 /* PRHHotkeysWindowController.m in Sources */,
+				313B6DC71836D4D30020C045 /* SRCommon.m in Sources */,
+				313B6DC81836D4D30020C045 /* SRKeyCodeTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +231,14 @@
 				313B6DB41836CE340020C045 /* en */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		313B6DC21836CE5D0020C045 /* PRHHotkeysWindowController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				313B6DC11836CE5D0020C045 /* en */,
+			);
+			name = PRHHotkeysWindowController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

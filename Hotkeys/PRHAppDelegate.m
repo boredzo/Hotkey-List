@@ -8,11 +8,20 @@
 
 #import "PRHAppDelegate.h"
 
-@implementation PRHAppDelegate
+#import "PRHHotkeysWindowController.h"
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+@implementation PRHAppDelegate
 {
-	// Insert code here to initialize your application
+	PRHHotkeysWindowController *_wc;
+}
+
+- (void)applicationWillFinishLaunching:(NSNotification *)notification {
+	_wc = [PRHHotkeysWindowController new];
+	[_wc showWindow:nil];
+}
+- (void)applicationWillTerminate:(NSNotification *)notification {
+	[_wc close];
+	_wc = nil;
 }
 
 @end
