@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Hotkeys' target in the 'Hotkeys' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+#endif
